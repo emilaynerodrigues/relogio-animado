@@ -358,39 +358,46 @@ body {
     top: 2rem;
     right: 5rem;
   }
-  
+
   .star:nth-child(5) {
     top: 8rem;
     left: 10rem;
   }
-  
+
   .star:nth-child(6) {
     top: 12rem;
     right: 3rem;
   }
-  
+
   .star:nth-child(7) {
     top: 17rem;
     right: 8rem;
   }
-  
+
   .star:nth-child(8) {
     top: 15rem;
     left: 2rem;
   }
-  
+
   .star:nth-child(9) {
     top: 43rem;
     left: 18rem;
   }
-  
+
   .star:nth-child(10) {
     top: 33rem;
     left: 20rem;
   }
-  
+
   .star:nth-child(11) {
     top: 30rem;
     right: 15rem;
   }
+}
+
+.shooting-star:nth-child(3) {
+  top: 23rem;
+  left: -5rem;
+  animation-delay: 1.3s;
+  animation-duration: 3s;
 }
