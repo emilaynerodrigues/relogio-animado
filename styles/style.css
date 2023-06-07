@@ -69,14 +69,19 @@ body {
   right: 0;
 }
 
-.tag h1 {
+.tag span {
   font-family: "Bebas Neue", cursive;
   letter-spacing: 0.5rem;
-  font-size: 6rem;
+  font-size: 7rem;
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: -0.5rem;
+}
+
+.content-hour {
+  display: flex;
+  justify-content: center;
 }
 
 .bottom-tag {
@@ -239,14 +244,17 @@ body {
   animation-duration: 3s;
 }
 
+
 @keyframes shootingStars {
   0% {
     transform: rotate(-150deg) translateX(0);
     opacity: 1;
   }
+
   70% {
     opacity: 1;
   }
+
   100% {
     transform: rotate(-150deg) translateX(-1500px);
     opacity: 0;
@@ -263,9 +271,11 @@ body {
   0% {
     transform: rotate(-10deg);
   }
+
   50% {
     transform: rotate(10deg);
   }
+
   100% {
     transform: rotate(-10deg);
   }
@@ -275,15 +285,83 @@ body {
   0% {
     transform: scale(0.5);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(0.5);
   }
 }
 
-@media screen and (max-width: 500px) {
+/* query para ipads e tablets */
+@media screen and (max-width: 960px) {
+  .moon img {
+    height: 70rem;
+    bottom: -47rem;
+    left: -32rem;
+  }
+
+  .red-planet img {
+    height: 12rem;
+    bottom: -2rem;
+    right: -5rem;
+  }
+
+  .earth img {
+    height: 10rem;
+    top: 3rem;
+    left: 1rem;
+  }
+
+  .jupiter img {
+    height: 7rem;
+    top: 1rem;
+    left: 10rem;
+  }
+
+  .spaceship img {
+    height: 4rem;
+    top: 13rem;
+    right: 3rem;
+  }
+
+  .line {
+    width: 6rem;
+  }
+
+  .top-tag .line:nth-child(1) {
+    left: 0rem;
+  }
+
+  .top-tag .line:nth-child(3) {
+    right: 0rem;
+  }
+
+  .tag span {
+    font-size: 5rem;
+  }
+
+  .bottom-tag {
+    margin-top: 1rem;
+  }
+
+  .bottom-tag .line {
+    width: 9rem;
+  }
+
+  .orange-planet {
+    width: 1rem;
+    height: 1rem;
+    right: 7.8rem;
+    bottom: 1.5rem;
+  }
+
+}
+
+/* query para dispositivos móveis */
+@media screen and (max-width: 480px) {
   body {
     overflow-x: hidden;
   }
@@ -296,7 +374,7 @@ body {
 
   .red-planet img {
     height: 8rem;
-    bottom: 2rem;
+    bottom: -1rem;
     right: -3rem;
   }
 
@@ -330,8 +408,8 @@ body {
     right: 0rem;
   }
 
-  .tag h1 {
-    font-size: 3rem;
+  .tag span {
+    font-size: 4rem;
   }
 
   .bottom-tag {
@@ -393,11 +471,12 @@ body {
     top: 30rem;
     right: 15rem;
   }
-}
 
-.shooting-star:nth-child(3) {
-  top: 23rem;
-  left: -5rem;
-  animation-delay: 1.3s;
-  animation-duration: 3s;
+  .shooting-star:nth-child(3) {
+    top: 23rem;
+    left: -5rem;
+    animation-delay: 1.3s;
+    animation-duration: 3s;
+  }
+
 }
