@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+
+:root {
+  --font-color: #d9d9d9;
+  --line-color: #d9d9d96c;
+  --blue: #2c76a8;
+  --orange: #c97425;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro", sans-serif;
+  color: var(--font-color);
+}
+
+html {
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: url("../img/background.png") no-repeat center center;
+  background-size: cover;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.top-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  /* gap: 1rem; */
+}
+
+.top-tag span {
+  text-transform: uppercase;
+}
+
+.line {
+  border: 0.5px solid var(--line-color);
+  width: 10rem;
+  height: 0.5px;
+}
+
+.top-tag .line:nth-child(1) {
+  position: absolute;
+  left: 0;
+}
+
+.top-tag .line:nth-child(3) {
+  position: absolute;
+  right: 0;
+}
+
+.tag span {
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 0.5rem;
+  font-size: 7rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: -0.5rem;
+}
+
+.content-hour {
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.bottom-tag .line {
+  width: 13.2rem;
+}
+
+.blue-planet {
+  width: 1.8rem;
+  height: 1.8rem;
+  background: var(--blue);
+  border-radius: 50%;
+}
+
+.orange-planet {
+  width: 1rem;
+  height: 1rem;
+  background: var(--orange);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 13rem;
+}
+
+.moon img {
+  height: 120rem;
+  position: absolute;
+  bottom: -88rem;
+  left: -40rem;
+  animation: rotate 100s infinite linear;
+  z-index: 10;
+}
+
+.red-planet img {
+  height: 12rem;
+  position: absolute;
+  bottom: -2rem;
+  right: -5rem;
+  animation: rotate 10s infinite linear;
+  z-index: 10;
+}
+
+.earth img {
+  height: 12rem;
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  animation: rotate 20s infinite linear;
+  z-index: 10;
+}
+
+.jupiter img {
+  height: 5rem;
+  position: absolute;
+  top: 3rem;
+  left: 16rem;
+  animation: rotate 10s infinite linear;
+  z-index: 10;
+}
+
+.spaceship img {
+  height: 5rem;
+  position: absolute;
+  top: 10rem;
+  right: 8rem;
+  animation: leftRight 5s infinite linear;
+}
+
+.star {
+  height: 0.3rem;
+  width: 0.3rem;
+  border-radius: 50%;
+  background: var(--font-color);
+  position: absolute;
+  animation: blink 3s linear infinite;
+}
+
+.star:nth-child(4) {
+  top: 10rem;
+  left: 18rem;
+}
+
+.star:nth-child(5) {
+  top: 3rem;
+  left: 40rem;
+}
+
+.star:nth-child(6) {
+  top: 8rem;
+  right: 23rem;
+}
+
+.star:nth-child(7) {
+  top: 9.5rem;
+  right: 10rem;
+}
+
+.star:nth-child(8) {
+  top: 12rem;
+  right: 35rem;
+}
+
+.star:nth-child(9) {
+  top: 20rem;
+  left: 8rem;
+}
+
+.star:nth-child(10) {
+  top: 23rem;
+  left: 20rem;
+}
+
+.star:nth-child(11) {
+  top: 30rem;
+  right: 20rem;
+}
+
+.shooting-star {
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  height: 0.3rem;
+  width: 0.3rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
+    0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 0 2px rgba(255, 255, 255, 1);
+  animation: shootingStars 3s linear infinite;
+  animation-delay: 1s;
+}
+
+.shooting-star::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, #fff, transparent);
+}
+
+.shooting-star:nth-child(2) {
+  top: 10rem;
+  left: -5rem;
+  animation-delay: 1.5s;
+  animation-duration: 3s;
+}
+
+.shooting-star:nth-child(3) {
+  top: -10rem;
+  left: 10rem;
+  animation-delay: 1.3s;
+  animation-duration: 3s;
+}
+
+
+@keyframes shootingStars {
+  0% {
+    transform: rotate(-150deg) translateX(0);
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(-150deg) translateX(-1500px);
+    opacity: 0;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes leftRight {
+  0% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(0.5);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+/* query para ipads e tablets */
+@media screen and (max-width: 960px) {
+  .moon img {
+    height: 70rem;
+    bottom: -47rem;
+    left: -32rem;
+  }
+
+  .red-planet img {
+    height: 12rem;
+    bottom: -2rem;
+    right: -5rem;
+  }
+
+  .earth img {
+    height: 10rem;
+    top: 3rem;
+    left: 1rem;
+  }
+
+  .jupiter img {
+    height: 7rem;
+    top: 1rem;
+    left: 10rem;
+  }
+
+  .spaceship img {
+    height: 4rem;
+    top: 13rem;
+    right: 3rem;
+  }
+
+  .line {
+    width: 6rem;
+  }
+
+  .top-tag .line:nth-child(1) {
+    left: 0rem;
+  }
+
+  .top-tag .line:nth-child(3) {
+    right: 0rem;
+  }
+
+  .tag span {
+    font-size: 5rem;
+  }
+
+  .bottom-tag {
+    margin-top: 1rem;
+  }
+
+  .bottom-tag .line {
+    width: 9rem;
+  }
+
+  .orange-planet {
+    width: 1rem;
+    height: 1rem;
+    right: 7.8rem;
+    bottom: 1.5rem;
+  }
+
+}
+
+/* query para dispositivos móveis */
+@media screen and (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .moon img {
+    height: 50rem;
+    bottom: -30rem;
+    left: -25rem;
+  }
+
+  .red-planet img {
+    height: 8rem;
+    bottom: -1rem;
+    right: -3rem;
+  }
+
+  .earth img {
+    height: 8rem;
+    top: 3rem;
+    left: 1rem;
+  }
+
+  .jupiter img {
+    height: 5rem;
+    top: 1rem;
+    left: 8rem;
+  }
+
+  .spaceship img {
+    height: 3rem;
+    top: 13rem;
+    right: 2rem;
+  }
+
+  .line {
+    width: 4rem;
+  }
+
+  .top-tag .line:nth-child(1) {
+    left: 0rem;
+  }
+
+  .top-tag .line:nth-child(3) {
+    right: 0rem;
+  }
+
+  .tag span {
+    font-size: 4rem;
+  }
+
+  .bottom-tag {
+    margin-top: 1rem;
+  }
+
+  .bottom-tag .line {
+    width: 7rem;
+  }
+
+  .blue-planet {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .orange-planet {
+    width: 0.6rem;
+    height: 0.6rem;
+    right: 7.5rem;
+    bottom: 1.3rem;
+  }
+
+  .star:nth-child(4) {
+    top: 2rem;
+    right: 5rem;
+  }
+
+  .star:nth-child(5) {
+    top: 8rem;
+    left: 10rem;
+  }
+
+  .star:nth-child(6) {
+    top: 12rem;
+    right: 3rem;
+  }
+
+  .star:nth-child(7) {
+    top: 17rem;
+    right: 8rem;
+  }
+
+  .star:nth-child(8) {
+    top: 15rem;
+    left: 2rem;
+  }
+
+  .star:nth-child(9) {
+    top: 43rem;
+    left: 18rem;
+  }
+
+  .star:nth-child(10) {
+    top: 33rem;
+    left: 20rem;
+  }
+
+  .star:nth-child(11) {
+    top: 30rem;
+    right: 15rem;
+  }
+
+  .shooting-star:nth-child(3) {
+    top: 23rem;
+    left: -5rem;
+    animation-delay: 1.3s;
+    animation-duration: 3s;
+  }
+
+}
