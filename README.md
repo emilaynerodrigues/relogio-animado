@@ -2,6 +2,8 @@
 
 Este é um projeto simples de um relógio animado criado com HTML, CSS e JavaScript. O objetivo deste projeto é praticar a utilização do objeto Date em JavaScript para exibir o horário atual e o dia da semana.
 
+Link de acesso: https://emilaynerodrigues.github.io/relogio-animado/
+
 ## Funcionalidades
 
 - Exibe o horário atual em tempo real.
